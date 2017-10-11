@@ -82,10 +82,20 @@ WSGI_APPLICATION = 'bufete_main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
+DATABASESx = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd3gsan7ofjpif7',
+        'USER': 'gzgsrqugyqhmkt',
+        'PASSWORD': 'df43aeb0b946665cf3dc7cd9d0ece3169e4fb44afe61aeaa7f362ac2eef9b6a3',
+        'HOST': 'ec2-23-21-245-156.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
@@ -99,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
